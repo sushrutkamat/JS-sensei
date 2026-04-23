@@ -3,14 +3,14 @@ import { ModuleLayout } from "@/components/layout/ModuleLayout";
 import { Module10Content } from "./Module10Content";
 
 export const metadata: Metadata = {
-  title: "Module 10: Async JavaScript & The Event Loop | JS Sensei",
+  title: "Module 11: Async JavaScript & The Event Loop | JS Sensei",
   description: "Promises, async/await, and the event loop visualized step by step.",
 };
 
-export default function Module10Page() {
+export default function Module11Page() {
   return (
     <ModuleLayout
-      moduleNum={10}
+      moduleNum={11}
       title="Async JavaScript & The Event Loop"
       description="Promises, async/await, and the event loop visualized step by step."
       time="30 min"
@@ -19,3 +19,4 @@ export default function Module10Page() {
     </ModuleLayout>
   );
 }
+

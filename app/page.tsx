@@ -8,7 +8,7 @@ import {
   Layers, GitBranch, Box, RefreshCcw, Globe, Cpu,
   Terminal, Sparkles, Shield
 } from "lucide-react";
-import { FloatingElement, StaggerList } from "@/components/animations/FadeInSection";
+import { StaggerList } from "@/components/animations/FadeInSection";
 import { ProgressBar } from "@/components/ui/components";
 
 // ── Mini Call Stack Demo ──────────────────────────────────────────────────────
@@ -73,28 +73,19 @@ function MiniCallStack() {
 const modules = [
   { num: 1, title: "Getting Started", icon: Play, desc: "Setup, script tags, first code", time: "20 min", href: "/modules/1-getting-started", color: "#7c3aed", built: true },
   { num: 2, title: "Variables & Types", icon: Box, desc: "var, let, const, all 8 data types", time: "20 min", href: "/modules/2-variables-and-types", color: "#0891b2", built: true },
-  { num: 3, title: "Operators", icon: Zap, desc: "Arithmetic, logical, comparison", time: "18 min", href: "/modules/3-operators-expressions", color: "#d97706", built: true },
-  { num: 4, title: "Control Flow", icon: GitBranch, desc: "if/else, loops, switch", time: "22 min", href: "/modules/4-control-flow", color: "#059669", built: true },
-  { num: 5, title: "Functions & Scope", icon: Code, desc: "Declarations, arrows, closures", time: "28 min", href: "/modules/5-functions-and-scope", color: "#db2777", built: true },
-  { num: 6, title: "Closures & Hoisting", icon: Layers, desc: "Lexical scope, backpack metaphor", time: "25 min", href: "/modules/6-closures-and-hoisting", color: "#7c3aed", built: true },
-  { num: 7, title: "Objects & Prototypes", icon: Globe, desc: "this, prototype chain, classes", time: "30 min", href: "/modules/7-objects-and-prototypes", color: "#0891b2", built: true },
-  { num: 8, title: "Arrays & Methods", icon: Shield, desc: "map, filter, reduce pipeline", time: "25 min", href: "/modules/8-arrays-and-methods", color: "#d97706", built: true },
-  { num: 9, title: "DOM & Events", icon: Globe, desc: "Document tree, bubbling, delegation", time: "30 min", href: "/modules/9-dom-and-events", color: "#059669", built: true },
-  { num: 10, title: "Async & Event Loop", icon: RefreshCcw, desc: "Promises, async/await, event loop", time: "35 min", href: "/modules/10-async-event-loop", color: "#db2777", built: true },
-  { num: 11, title: "ES6+ Features", icon: Sparkles, desc: "Destructuring, spread, generators", time: "28 min", href: "/modules/11-es6-plus-features", color: "#7c3aed", built: true },
-  { num: 12, title: "Error Handling", icon: Terminal, desc: "try/catch, error types, debugging", time: "20 min", href: "/modules/12-error-handling", color: "#0891b2", built: true },
-  { num: 13, title: "JS Under the Hood", icon: Cpu, desc: "Engine, Call Stack, Memory Heap", time: "25 min", href: "/modules/13-js-under-the-hood", color: "#059669", built: true },
-];
-
-const floatingSymbols = [
-  { text: "{ }", x: "8%", y: "15%", size: "1.8rem", delay: 0 },
-  { text: "=>", x: "85%", y: "10%", size: "1.4rem", delay: 1 },
-  { text: "const", x: "75%", y: "60%", size: "1rem", delay: 2 },
-  { text: "[ ]", x: "5%", y: "70%", size: "1.6rem", delay: 0.5 },
-  { text: "===", x: "88%", y: "80%", size: "1.1rem", delay: 1.5 },
-  { text: "async", x: "15%", y: "45%", size: "0.9rem", delay: 2.5 },
-  { text: "()", x: "60%", y: "20%", size: "2rem", delay: 0.8 },
-  { text: "typeof", x: "40%", y: "85%", size: "0.85rem", delay: 3 },
+  { num: 3, title: "Working with Primitives", icon: Zap, desc: "String, number & boolean operations in depth", time: "30 min", href: "/modules/3-working-with-primitives", color: "#059669", built: true },
+  { num: 4, title: "Operators", icon: Code, desc: "Arithmetic, logical, comparison", time: "18 min", href: "/modules/4-operators-expressions", color: "#d97706", built: true },
+  { num: 5, title: "Control Flow", icon: GitBranch, desc: "if/else, loops, switch", time: "22 min", href: "/modules/5-control-flow", color: "#db2777", built: true },
+  { num: 6, title: "Functions & Scope", icon: Layers, desc: "Declarations, arrows, closures", time: "28 min", href: "/modules/6-functions-and-scope", color: "#7c3aed", built: true },
+  { num: 7, title: "Closures & Hoisting", icon: Globe, desc: "Lexical scope, backpack metaphor", time: "25 min", href: "/modules/7-closures-and-hoisting", color: "#0891b2", built: true },
+  { num: 8, title: "Objects & Prototypes", icon: Globe, desc: "this, prototype chain, classes", time: "30 min", href: "/modules/8-objects-and-prototypes", color: "#d97706", built: true },
+  { num: 9, title: "Arrays & Methods", icon: Shield, desc: "map, filter, reduce pipeline", time: "25 min", href: "/modules/9-arrays-and-methods", color: "#059669", built: true },
+  { num: 10, title: "DOM & Events", icon: Globe, desc: "Document tree, bubbling, delegation", time: "30 min", href: "/modules/10-dom-and-events", color: "#db2777", built: true },
+  { num: 11, title: "Async & Event Loop", icon: RefreshCcw, desc: "Promises, async/await, event loop", time: "35 min", href: "/modules/11-async-event-loop", color: "#7c3aed", built: true },
+  { num: 12, title: "ES6+ Features", icon: Sparkles, desc: "Destructuring, spread, generators", time: "28 min", href: "/modules/12-es6-plus-features", color: "#0891b2", built: true },
+  { num: 13, title: "Error Handling", icon: Terminal, desc: "try/catch, error types, debugging", time: "20 min", href: "/modules/13-error-handling", color: "#d97706", built: true },
+  { num: 14, title: "JS Under the Hood", icon: Cpu, desc: "Engine, Call Stack, Memory Heap", time: "25 min", href: "/modules/14-js-under-the-hood", color: "#059669", built: true },
+  { num: 15, title: "Best Coding Practices", icon: Shield, desc: "26 practices every JS dev must know", time: "40 min", href: "/modules/15-best-practices", color: "#ec4899", built: true },
 ];
 
 // ── Landing Page ──────────────────────────────────────────────────────────────
@@ -125,33 +116,15 @@ export default function HomePage() {
         position: "relative",
         overflow: "hidden",
         padding: "100px 24px 60px",
-        background: "radial-gradient(ellipse at 50% -20%, hsl(265, 70%, 20%) 0%, var(--bg-primary) 60%)",
+        background: "radial-gradient(ellipse at 50% -20%, var(--hero-glow) 0%, var(--bg-primary) 60%)",
       }}>
-        {/* Floating symbols */}
-        {floatingSymbols.map((sym, i) => (
-          <FloatingElement key={i} duration={5 + i * 0.5} delay={sym.delay}>
-            <div style={{
-              position: "absolute",
-              left: sym.x,
-              top: sym.y,
-              fontSize: sym.size,
-              fontFamily: "var(--font-mono)",
-              color: "var(--primary)",
-              opacity: 0.12,
-              fontWeight: 700,
-              userSelect: "none",
-              pointerEvents: "none",
-            }}>
-              {sym.text}
-            </div>
-          </FloatingElement>
-        ))}
+        {/* Floating symbols removed */}
 
         {/* Grid dots background */}
         <div style={{
           position: "absolute",
           inset: 0,
-          backgroundImage: "radial-gradient(circle at 1px 1px, rgba(139,92,246,0.12) 1px, transparent 0)",
+          backgroundImage: "radial-gradient(circle at 1px 1px, var(--hero-dots) 1px, transparent 0)",
           backgroundSize: "40px 40px",
           pointerEvents: "none",
         }} />
@@ -163,7 +136,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 24, background: "rgba(139, 92, 246, 0.1)", border: "1px solid rgba(139, 92, 246, 0.3)", borderRadius: 50, padding: "6px 16px" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 24, background: "var(--hero-badge-bg)", border: "1px solid var(--hero-badge-border)", borderRadius: 50, padding: "6px 16px" }}>
               <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--success)", display: "block", animation: "pulse-ring 2s infinite" }} />
               <span style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontWeight: 500 }}>
                 Interactive • Animated • For absolute beginners
@@ -185,7 +158,7 @@ export default function HomePage() {
 
             <p style={{ fontSize: "clamp(1rem, 2.5vw, 1.2rem)", color: "var(--text-muted)", maxWidth: 580, margin: "0 auto 36px", lineHeight: 1.7 }}>
               Every concept explained with stunning animations and interactive visualizers.
-              Zero experience needed. 13 modules. 2 days to master JavaScript.
+              Zero experience needed. 15 modules. 2 days to master JavaScript.
             </p>
 
             <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
@@ -216,7 +189,7 @@ export default function HomePage() {
                   whileHover={{ scale: 1.04, y: -2 }}
                   whileTap={{ scale: 0.97 }}
                   style={{
-                    background: "rgba(255,255,255,0.04)",
+                    background: "var(--glass-bg)",
                     color: "var(--secondary)",
                     padding: "14px 32px",
                     borderRadius: 12,
@@ -226,7 +199,7 @@ export default function HomePage() {
                     display: "flex",
                     alignItems: "center",
                     gap: 8,
-                    border: "1px solid rgba(6, 182, 212, 0.3)",
+                    border: "1px solid var(--glass-border-strong)",
                     backdropFilter: "blur(12px)",
                     cursor: "pointer",
                   }}
@@ -244,9 +217,9 @@ export default function HomePage() {
             transition={{ duration: 0.7, delay: 0.4 }}
             style={{
               marginTop: 60,
-              background: "rgba(255,255,255,0.04)",
+              background: "var(--glass-bg)",
               backdropFilter: "blur(20px)",
-              border: "1px solid rgba(255,255,255,0.1)",
+              border: "1px solid var(--glass-border)",
               borderRadius: 16,
               padding: 24,
               maxWidth: 400,
@@ -380,7 +353,7 @@ export default function HomePage() {
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 36, flexWrap: "wrap", gap: 12 }}>
           <div>
             <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "2rem", fontWeight: 700, color: "var(--text)", marginBottom: 6 }}>All Modules</h2>
-            <p style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>13 interactive modules • Start from the beginning or jump to any topic</p>
+            <p style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>14 interactive modules • Start from the beginning or jump to any topic</p>
           </div>
         </div>
 
@@ -424,7 +397,7 @@ export default function HomePage() {
                       fontFamily: "var(--font-heading)",
                       fontSize: "4.5rem",
                       fontWeight: 800,
-                      opacity: 0.06,
+                      opacity: "var(--card-num-opacity)",
                       color: mod.color,
                       lineHeight: 1,
                       userSelect: "none",

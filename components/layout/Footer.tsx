@@ -33,7 +33,7 @@ export function Footer() {
             <span>for the JavaScript community</span>
           </div>
           <div style={{ display: "flex", gap: 24, marginTop: 8 }}>
-            {["How JS Works", "Variables", "Async & Event Loop"].map(title => (
+            {["Sushrut Kamat   |", "2026", "|   www.sushrutkamat.com"].map(title => (
               <span key={title} style={{ color: "var(--text-muted)", fontSize: "0.8rem" }}>{title}</span>
             ))}
           </div>

@@ -14,8 +14,8 @@ export function ThemeToggle() {
       whileTap={{ scale: 0.9 }}
       aria-label="Toggle theme"
       style={{
-        background: "var(--bg-surface-2)",
-        border: "1px solid var(--border)",
+        background: "rgba(255, 255, 255, 0.05)",
+        border: "1px solid rgba(255, 255, 255, 0.1)",
         borderRadius: "50%",
         width: 36,
         height: 36,
@@ -23,7 +23,7 @@ export function ThemeToggle() {
         alignItems: "center",
         justifyContent: "center",
         cursor: "pointer",
-        color: "var(--text-muted)",
+        color: "rgba(255, 255, 255, 0.7)",
         transition: "color 0.2s",
       }}
     >

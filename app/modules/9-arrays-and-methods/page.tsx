@@ -3,14 +3,14 @@ import { ModuleLayout } from "@/components/layout/ModuleLayout";
 import { Module8Content } from "./Module8Content";
 
 export const metadata: Metadata = {
-  title: "Module 8: Arrays & Methods | JS Sensei",
+  title: "Module 9: Arrays & Methods | JS Sensei",
   description: "Master JavaScript arrays and their built-in methods with live demos.",
 };
 
-export default function Module8Page() {
+export default function Module9Page() {
   return (
     <ModuleLayout
-      moduleNum={8}
+      moduleNum={9}
       title="Arrays & Methods"
       description="Master JavaScript arrays and their built-in methods with live demos."
       time="20 min"
@@ -19,3 +19,4 @@ export default function Module8Page() {
     </ModuleLayout>
   );
 }
+

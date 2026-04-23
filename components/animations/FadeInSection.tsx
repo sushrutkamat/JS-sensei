@@ -99,29 +99,3 @@ export function TypewriterText({ text, delay = 0, speed = 0.03, className, style
   );
 }
 
-export function FloatingElement({
-  children,
-  duration = 6,
-  delay = 0,
-}: {
-  children: React.ReactNode;
-  duration?: number;
-  delay?: number;
-}) {
-  return (
-    <motion.div
-      animate={{
-        y: [0, -12, 0],
-        rotate: [0, 2, -2, 0],
-      }}
-      transition={{
-        duration,
-        delay,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-}

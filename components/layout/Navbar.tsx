@@ -10,17 +10,19 @@ import { ThemeToggle } from "./ThemeToggle";
 const modules = [
   { num: 1, title: "Getting Started", href: "/modules/1-getting-started" },
   { num: 2, title: "Variables & Types", href: "/modules/2-variables-and-types" },
-  { num: 3, title: "Operators", href: "/modules/3-operators-expressions" },
-  { num: 4, title: "Control Flow", href: "/modules/4-control-flow" },
-  { num: 5, title: "Functions & Scope", href: "/modules/5-functions-and-scope" },
-  { num: 6, title: "Closures & Hoisting", href: "/modules/6-closures-and-hoisting" },
-  { num: 7, title: "Objects & Prototypes", href: "/modules/7-objects-and-prototypes" },
-  { num: 8, title: "Arrays & Methods", href: "/modules/8-arrays-and-methods" },
-  { num: 9, title: "DOM & Events", href: "/modules/9-dom-and-events" },
-  { num: 10, title: "Async & Event Loop", href: "/modules/10-async-event-loop" },
-  { num: 11, title: "ES6+ Features", href: "/modules/11-es6-plus-features" },
-  { num: 12, title: "Error Handling", href: "/modules/12-error-handling" },
-  { num: 13, title: "JS Under the Hood", href: "/modules/13-js-under-the-hood" },
+  { num: 3, title: "Working with Primitives", href: "/modules/3-working-with-primitives" },
+  { num: 4, title: "Operators", href: "/modules/4-operators-expressions" },
+  { num: 5, title: "Control Flow", href: "/modules/5-control-flow" },
+  { num: 6, title: "Functions & Scope", href: "/modules/6-functions-and-scope" },
+  { num: 7, title: "Closures & Hoisting", href: "/modules/7-closures-and-hoisting" },
+  { num: 8, title: "Objects & Prototypes", href: "/modules/8-objects-and-prototypes" },
+  { num: 9, title: "Arrays & Methods", href: "/modules/9-arrays-and-methods" },
+  { num: 10, title: "DOM & Events", href: "/modules/10-dom-and-events" },
+  { num: 11, title: "Async & Event Loop", href: "/modules/11-async-event-loop" },
+  { num: 12, title: "ES6+ Features", href: "/modules/12-es6-plus-features" },
+  { num: 13, title: "Error Handling", href: "/modules/13-error-handling" },
+  { num: 14, title: "JS Under the Hood", href: "/modules/14-js-under-the-hood" },
+  { num: 15, title: "Best Coding Practices", href: "/modules/15-best-practices" },
 ];
 
 export function Navbar() {
@@ -59,8 +61,8 @@ export function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle module menu"
             style={{
-              background: "var(--bg-surface)",
-              border: "1px solid var(--border)",
+              background: "rgba(255, 255, 255, 0.05)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
               borderRadius: 10,
               width: 40,
               height: 40,
@@ -68,7 +70,7 @@ export function Navbar() {
               alignItems: "center",
               justifyContent: "center",
               cursor: "pointer",
-              color: "var(--text-muted)",
+              color: "rgba(255, 255, 255, 0.7)",
               transition: "all 0.2s",
             }}
           >
@@ -95,7 +97,7 @@ export function Navbar() {
               padding: "7px 14px",
               borderRadius: 8,
               textDecoration: "none",
-              color: "var(--text-muted)",
+              color: "rgba(255, 255, 255, 0.7)",
               fontSize: "0.875rem",
               fontFamily: "var(--font-body)",
               border: "1px solid transparent",
@@ -109,7 +111,7 @@ export function Navbar() {
             }}
             onMouseLeave={e => {
               const el = e.currentTarget as HTMLElement;
-              el.style.color = "var(--text-muted)";
+              el.style.color = "rgba(255, 255, 255, 0.7)";
               el.style.background = "transparent";
               el.style.borderColor = "transparent";
             }}

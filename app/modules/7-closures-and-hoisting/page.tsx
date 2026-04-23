@@ -3,14 +3,14 @@ import { ModuleLayout } from "@/components/layout/ModuleLayout";
 import { Module6Content } from "./Module6Content";
 
 export const metadata: Metadata = {
-  title: "Module 6: Closures & Hoisting | JS Sensei",
+  title: "Module 7: Closures & Hoisting | JS Sensei",
   description: "Closures and hoisting explained with interactive memory visualizers.",
 };
 
-export default function Module6Page() {
+export default function Module7Page() {
   return (
     <ModuleLayout
-      moduleNum={6}
+      moduleNum={7}
       title="Closures & Hoisting"
       description="Closures and hoisting explained with interactive memory visualizers."
       time="25 min"
@@ -19,3 +19,4 @@ export default function Module6Page() {
     </ModuleLayout>
   );
 }
+

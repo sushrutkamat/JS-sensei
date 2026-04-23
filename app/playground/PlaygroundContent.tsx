@@ -57,17 +57,17 @@ function runCode(code: string): ConsoleEntry[] {
         entries.push({ type: "log", values: [`[Table] ${safeStringify(data)}`], timestamp: Date.now() });
       } catch { entries.push({ type: "log", values: ["[Table]"], timestamp: Date.now() }); }
     },
-    clear: () => {},
+    clear: () => { },
     count: makeLogger("log"),
     assert: (condition: boolean, ...args: unknown[]) => {
       if (!condition) entries.push({ type: "error", values: ["Assertion failed:", ...args.map(a => safeStringify(a))], timestamp: Date.now() });
     },
     dir: makeLogger("log"),
     trace: makeLogger("log"),
-    time: () => {},
-    timeEnd: () => {},
+    time: () => { },
+    timeEnd: () => { },
     group: makeLogger("log"),
-    groupEnd: () => {},
+    groupEnd: () => { },
   };
 
   try {
@@ -264,7 +264,7 @@ function SimpleEditor({
           top: 0,
           bottom: 0,
           width: 44,
-          background: "rgba(0,0,0,0.15)",
+          background: "var(--bg-surface-2)",
           padding: "16px 0",
           overflowY: "hidden",
           userSelect: "none",
@@ -407,7 +407,7 @@ export function PlaygroundContent() {
       {/* Editor + Output */}
       <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", overflow: "hidden" }}>
         {/* Editor */}
-        <div style={{ borderRight: "1px solid var(--border)", overflow: "hidden", background: "hsl(230, 22%, 9%)" }}>
+        <div style={{ borderRight: "1px solid var(--border)", overflow: "hidden", background: "var(--bg-primary)" }}>
           <div style={{ padding: "8px 16px", background: "var(--bg-surface-2)", borderBottom: "1px solid var(--border)", display: "flex", alignItems: "center", gap: 8 }}>
             <div style={{ display: "flex", gap: 5 }}>
               {["#ef4444", "#f59e0b", "#22c55e"].map((c, i) => (
@@ -460,7 +460,7 @@ export function PlaygroundContent() {
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.04 }}
-                  style={{ color, marginBottom: 4, display: "flex", alignItems: "flex-start", gap: 8, borderBottom: "1px solid rgba(255,255,255,0.03)", paddingBottom: 4 }}
+                  style={{ color, marginBottom: 4, display: "flex", alignItems: "flex-start", gap: 8, borderBottom: "1px solid var(--border)", paddingBottom: 4 }}
                 >
                   <span style={{ opacity: 0.4, minWidth: 16, fontSize: "0.75rem", marginTop: 2 }}>{prefix || "›"}</span>
                   <span style={{ wordBreak: "break-all" }}>{entry.values.join(" ")}</span>
